@@ -1,12 +1,12 @@
 import React from "react";
 import News from "../components/News";
 
-function Sports() {
+function Entertainment() {
   return (
     <div>
-      <News value={"&q=sports"} />
+      <News value={"&q=entertainment"} />
     </div>
   );
 }
 
-export default Sports;
+export default Entertainment;

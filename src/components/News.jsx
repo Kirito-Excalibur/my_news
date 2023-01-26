@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 
-function News() {
+function News({ value }) {
   const [data, setData] = useState([]);
   useEffect(() => {
     async function getInfo() {
       const resp = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&apiKey=a5c95c3e18534fe7930f3b858519a32d`
+        `https://newsapi.org/v2/top-headlines?apiKey=a5c95c3e18534fe7930f3b858519a32d${value}`
       );
       const respData = await resp.json();
 
